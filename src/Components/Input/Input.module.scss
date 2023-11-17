@@ -1,0 +1,37 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  .title {
+    width: max-content;
+    display: inline-block;
+    margin-left: 15px;
+    z-index: 5;
+    background-color: #fff;
+    font-size: 18px;
+    padding: 0 5px 0 5px;
+  }
+  .input {
+    padding: 14px 16px;
+    border: 2px solid #dadada;
+    border-radius: 8px;
+    background-color: #fff;
+  }
+  &:focus-within {
+    .title {
+      color: #5d5fef;
+      animation: slow-down 0.3s forwards 1;
+    }
+    .input {
+      border: 2px solid #5d5fef;
+    }
+  }
+}
+@keyframes slow-down {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(12px);
+  }
+}
