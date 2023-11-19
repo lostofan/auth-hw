@@ -1,0 +1,10 @@
+@import '/src/Style/variables.scss';
+.root {
+  display: flex;
+  flex-direction: row;
+  .checkbox {
+    transform: scale(1.5);
+    margin-right: 10px;
+    accent-color: $main-blue;
+  }
+}

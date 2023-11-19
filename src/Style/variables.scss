@@ -1,0 +1,9 @@
+//Палитра цветов
+$main-blue: #5d5fef;
+$gray: #dadada;
+//Настройка шрифта
+@mixin font($fs, $fw, $col) {
+  font-size: $fs;
+  font-weight: $fw;
+  color: $col;
+}

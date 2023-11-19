@@ -1,0 +1,16 @@
+@import '/src//Style/variables.scss';
+.login {
+  background-color: $main-blue;
+  color: #fff;
+  padding: 15px 40px;
+  border-radius: 15px;
+  &:hover {
+    outline: 2px solid $main-blue;
+    background-color: #fff;
+    color: $main-blue;
+  }
+  &:active {
+    outline: 2px solid black;
+    color: black;
+  }
+}

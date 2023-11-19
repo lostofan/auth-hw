@@ -1,7 +1,10 @@
+@import '/src/Style/variables.scss';
 .root {
+  all: unset;
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin-bottom: 15px;
   .title {
     width: max-content;
     display: inline-block;
@@ -10,23 +13,28 @@
     background-color: #fff;
     font-size: 18px;
     padding: 0 5px 0 5px;
+    @include font(14px, 700, #000);
   }
   .input {
     padding: 14px 16px;
-    border: 2px solid #dadada;
+    border: 2px solid $gray;
     border-radius: 8px;
     background-color: #fff;
+    @include font(18px, 300, #000);
+    font-style: italic;
+    &:focus {
+      border: unset;
+      border: 2px solid $main-blue;
+    }
   }
   &:focus-within {
     .title {
-      color: #5d5fef;
       animation: slow-down 0.3s forwards 1;
-    }
-    .input {
-      border: 2px solid #5d5fef;
+      @include font(14px, 700, $main-blue);
     }
   }
 }
+
 @keyframes slow-down {
   from {
     transform: translateY(0px);
